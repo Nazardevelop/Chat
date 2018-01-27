@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <p *ngIf="messages.length === 0">History of messages is empty</p>
+    <ul *ngIf="messages.length > 0">
+        <li *ngFor="let message of messages">
+            <strong>{{message.username}}</strong> says: {{message.message}}
+        </li>
+    </ul>
+    <form [formGroup]="form" (ngSubmit)="onFormSubmit()" class="write-field">
+            <div class="button_wrapper">
+                <input  type="text"
+                        formControlName="userInput"
+                        placeholder="write your message">
+                <button type="submit" [disabled]="!form.valid">Go</button>
+            </div>
+    </form>
+</div>

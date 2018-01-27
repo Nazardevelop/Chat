@@ -1,0 +1,31 @@
+.wrapper {
+    display:block;
+    width: 100%;
+    min-width: 100px;
+   background: #BBDEFB;
+   text-align: center;
+}
+img {
+    width: 50%;
+    height:50%;
+    float: left;
+    max-width:100px;
+    max-height: 100px;
+    min-width: 40px;
+    min-height:40px;
+}
+button {
+    width: 100%;
+    min-width:50px;
+    border:none;
+    min-height: 100px;
+    margin: auto;
+}
+.text{
+    display: block;
+    text-align: center;
+}
+button:hover{
+    background-color: #2196F3;
+    color: #BBDEFB;
+}

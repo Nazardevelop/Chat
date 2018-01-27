@@ -1,0 +1,30 @@
+.wrapper {
+    position: relative;
+    min-height: 500px;
+    /*background:url(../../assets/images/bg_image_main.jpg) no-repeat; */
+}
+.write-field {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.button_wrapper {
+    display: block;
+    font-size: 30px;
+    width:100%;
+    background: yellow;
+}
+input {
+    border:none;
+    border-radius: 20px;
+    width:80%;
+    min-width: 200px;
+    height:2em;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left:5px;
+}
+button {
+    height: 2em;
+    border:none;
+}

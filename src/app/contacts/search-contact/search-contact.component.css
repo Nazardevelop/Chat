@@ -1,0 +1,10 @@
+.wrapper {
+    background: #BBDEFB;
+}
+input {
+    border: none;
+   width: 95%;
+   margin-left:2%;
+   margin-top: 5px;
+   margin-bottom: 20px;
+}

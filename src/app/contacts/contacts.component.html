@@ -1,0 +1,8 @@
+<div class="serach-wrapper">
+    <app-search-contact></app-search-contact>
+</div>
+
+<app-contact *ngFor="let contact of contacts"
+             (contactSelect)="onSelectUser($event)"
+             [contact]="contact">
+</app-contact>
