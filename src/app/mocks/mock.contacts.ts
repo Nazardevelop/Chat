@@ -10,12 +10,12 @@ export const CONTACTS: Contact[] = [
     {
         id: 2,
         name: 'Petya',
-        surname: 'Zhopkin',
+        surname: 'Voronov',
         image : '../../assets/images/Petya.PNG'
     },
     {
         id: 3,
-        name: 'Masha',
+        name: 'Valya',
         surname: 'Stesnyasha',
         image : '../../assets/images/Masha.PNG'
     }

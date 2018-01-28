@@ -1,3 +1,17 @@
 <div class="wrapper">
-    <input type="text" name="search" placeholder="search">
+    <input  type="text" 
+            name="search" 
+            placeholder="search"
+            [formControl]="myControl"
+            (click)="onClick()"
+            (keyup.enter)="onFormSubmit()"
+    >
+    <ul *ngIf="filteredContacts.length" >
+        <li *ngFor="let contact of filteredContacts" (click)="chooseContact(contact)">
+            {{contact.name}}
+        </li>
+    </ul>
+    <p *ngIf="isError">
+        You dont have a contact with such a name 
+    </p>
 </div>

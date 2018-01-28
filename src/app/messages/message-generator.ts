@@ -9,20 +9,20 @@ export class MessageGenerator {
 
     public createMessage(message: string): void {
         switch (message) {
-            case 'Privet': {
-                this.message = 'Privet';
+            case 'Hello': {
+                this.message = 'Whats up';
                 break;
             }
-            case 'Привет': {
-                this.message = 'Привет';
+            case 'I am sory': {
+                this.message = 'Not a big deal';
                 break;
             }
-            case 'Idi nahuy': {
-                this.message = 'Sosi pistrun';
+            case 'You are the best': {
+                this.message = 'thanks)';
                 break;
             }
-            case 'Иди нахуй': {
-                this.message = 'Иди нахуй';
+            case 'You are bot': {
+                this.message = 'Yes I am';
                 break;
             }
             default: {

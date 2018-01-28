@@ -9,8 +9,8 @@ import { ContactsService } from '../services/contacts.service';
   styleUrls: ['./contacts.component.css'],
 })
 export class ContactsComponent implements OnInit {
-  selectedContact: Contact;
-  contacts: Contact[];
+  public selectedContact: Contact;
+  public contacts: Contact[];
 
   constructor(private contactsService: ContactsService) { }
 
@@ -25,6 +25,9 @@ export class ContactsComponent implements OnInit {
   }
 
   public onSelectUser(contact: Contact): void {
+    this.contactsService.selectContact(contact);
+  }
+  public onFoundUser(contact: Contact): void {
     this.contactsService.selectContact(contact);
   }
 

@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
   @Output() contactSelect: EventEmitter<Contact> = new EventEmitter<Contact>();
 
   constructor() { }
-  
+
   ngOnInit() {
   }
 
