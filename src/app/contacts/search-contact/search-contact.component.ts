@@ -7,6 +7,7 @@ import {map} from 'rxjs/operators/map';
 import { ContactsService } from '../../services/contacts.service';
 // models
 import { Contact } from '../../models/Contact';
+import { isError } from 'util';
 @Component({
   selector: 'app-search-contact',
   templateUrl: './search-contact.component.html',
@@ -41,14 +42,21 @@ debugger;
  }
 
 public onFormSubmit(): void {
-  this.filteredContacts.forEach((contact) => {
-    if (contact.name.toLocaleLowerCase === this.myControl.value.toLocaleLowerCase) {
-      this.contactChose.emit(contact);
-      this.myControl.reset();
-    } else {
-      this.isError = true;
-    }
-  });
+  if (this.filteredContacts.length) {
+    this.filteredContacts.forEach((contact) => {
+     // console.log("Work");
+      if (this.myControl.value) {
+        if (contact.name.toLocaleLowerCase() === this.myControl.value.toLocaleLowerCase()) {
+          this.contactChose.emit(contact);
+          this.myControl.reset();
+        } else {
+          this.isError = true;
+          console.log(isError);
+        }
+      }
+    });
+  }
+  this.isError = true;
 }
 
 public filter(val: string): void {
@@ -75,5 +83,6 @@ public filter(val: string): void {
 }
 public chooseContact(contact: Contact): void {
   this.contactChose.emit(contact);
+  this.myControl.reset();
 }
 }

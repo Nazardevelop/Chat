@@ -1,0 +1,11 @@
+.contacts {
+    overflow-y: scroll;
+    height: 90.5%;
+    margin-top: 20%;
+    z-index: -1;
+}
+.serach-wrapper {
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+}

@@ -6,12 +6,13 @@
             (click)="onClick()"
             (keyup.enter)="onFormSubmit()"
     >
+    <p *ngIf="isError" class="error">
+        You dont have a contact with such a name 
+    </p>
     <ul *ngIf="filteredContacts.length" >
-        <li *ngFor="let contact of filteredContacts" (click)="chooseContact(contact)">
+        <li *ngFor="let contact of filteredContacts"
+            (click)="chooseContact(contact)">
             {{contact.name}}
         </li>
     </ul>
-    <p *ngIf="isError">
-        You dont have a contact with such a name 
-    </p>
 </div>

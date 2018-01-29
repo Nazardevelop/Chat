@@ -1,8 +1,8 @@
 <div class="wrapper">
     <p *ngIf="messages.length === 0">History of messages is empty</p>
     <ul *ngIf="messages.length > 0">
-        <li *ngFor="let message of messages">
-            <strong>{{message.username}}</strong> says: {{message.message}}
+        <li *ngFor="let message of messages" [class.right-message]="checkIfYou(message.username)">
+            <strong>{{message.username}} </strong> {{message.message}}
         </li>
     </ul>
     <form [formGroup]="form" (ngSubmit)="onFormSubmit()" class="write-field">
@@ -10,7 +10,7 @@
                 <input  type="text"
                         formControlName="userInput"
                         placeholder="write your message">
-                <button type="submit" [disabled]="!form.valid">Go</button>
+                <button class="button" type="submit" [disabled]="!form.valid">Send</button>
             </div>
     </form>
 </div>

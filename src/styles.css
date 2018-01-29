@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-
-.app-wrapper {
-    display:block;
-    width: 60%;
-    min-width: 500px;
-    min-height: 500px;
-    background: #E3F2FD;
-    margin: auto;
+* {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
 }

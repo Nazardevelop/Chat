@@ -3,8 +3,9 @@
         (contactChose)="onSelectUser($event)"><!-- onFoundUser($event) -->
     </app-search-contact>
 </div>
-
-<app-contact *ngFor="let contact of contacts"
-             (contactSelect)="onSelectUser($event)"
-             [contact]="contact">
-</app-contact>
+<div class="contacts">
+    <app-contact *ngFor="let contact of contacts"
+                (contactSelect)="onSelectUser($event)"
+                [contact]="contact">
+    </app-contact>
+</div>

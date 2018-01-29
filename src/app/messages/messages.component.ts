@@ -52,7 +52,12 @@ export class MessagesComponent implements OnInit {
       this.messageService.generateMessage(this.activeContact, userInput);
     }
   }
-
+  public checkIfYou(userName: string): boolean {
+    if (userName === 'You are') {
+      return true;
+    }
+    return false;
+  }
   private initForm(): void {
     this.form = new FormGroup({
       userInput: new FormControl('', Validators.required)
